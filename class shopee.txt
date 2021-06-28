@@ -1,0 +1,27 @@
+Class Checkout เข้าหน้า จ่ายเงิน
+shopee-button-solid.shopee-button-solid--primary 
+cart-page-footer__checkout-text
+
+ปุ่มเปลี่ยนเวลาจัดส่ง
+_26DEZ8
+
+ปุ่มเลือกทุกเวลา
+stardust-radio PYpWnK stardust-radio--checked
+
+ปุ่มยืนยันเวลา
+stardust-button stardust-button--primary -T3OGq
+
+ปุ่มเลือกวิธีการชำระเงิน
+_1n5Ut6
+
+ปุ่มเลือกชำระผ่านบัตรเดบิต
+product-variation #แต่ชื่อคลาสมันซ้ำกัน
+XPath
+//*[@id="main"]/div/div[3]/div[2]/div[4]/div[1]/div/div[1]/div[2]/span[3]/button
+
+ปุ่มเลือกบัตร
+credit-card-info-view
+
+ปุ่มสั่งสินค้า
+stardust-button stardust-button--primary stardust-button--large _1qSlAe
+
