@@ -9,26 +9,47 @@ browser = webdriver.Chrome('chromedriver')
 #link close
 browser.get('https://shopee.co.th/product/40886114/9338776629/?')
 
-buy = False
+onclickbtn = False
 
 #Click Select Language
-BtnLang = browser.find_element_by_class_name('shopee-button-outline.shopee-button-outline--primary-reverse')
-BtnLang.click()
+sleep(1)
+browser.find_element_by_class_name('shopee-button-outline.shopee-button-outline--primary-reverse').click()
+# BtnLang
 #Click Select Language
 # sleep(1)
 
-while not buy:
-    
-    try:
-        browser.find_element_by_class_name('btn.btn-solid-primary.btn--l.btn-solid-primary--disabled._3Kiuzg')
-        print('Btn Close')
-        browser.refresh()
-        # sleep(0.5)
-    except NoSuchElementException:
-        # print("NoSuchElementException")
-        buy = False
-    except:
-        addToCartBtn = addButton = browser.find_element_by_class_name('btn.btn-solid-primary.btn--l._3Kiuzg')
-        addToCartBtn.click()
-        print('Btn Open')
-        buy = True
+# while not buy:
+
+# onclickbtn = False
+# while (True):
+#     if onclickbtn == False:
+#         try:
+#             browser.find_element_by_class_name('btn.btn-solid-primary.btn--l.btn-solid-primary--disabled._3Kiuzg')
+#             print('Btn Close')
+#             browser.refresh()
+#             # sleep(0.5)
+#         except NoSuchElementException:
+#             # print(exc)
+#             # print("NoSuchElementException")
+#             pass
+#         except:
+#             browser.find_element_by_class_name('btn.btn-solid-primary.btn--l._3Kiuzg').click()
+#             print('Btn Open')
+#             onclickbtn = True
+
+onclickbtn = False
+while (True):
+    if onclickbtn == False:
+        try:
+            try:
+                browser.find_element_by_class_name('btn.btn-solid-primary.btn--l.btn-solid-primary--disabled._3Kiuzg')
+                print('Btn Close')
+                browser.refresh()
+                # sleep(0.5)
+            except:
+                browser.find_element_by_class_name('btn.btn-solid-primary.btn--l._3Kiuzg').click()
+                print('Btn Open')
+                onclickbtn = True
+        except NoSuchElementException:
+            print("NoSuchElementException")
+            
