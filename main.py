@@ -10,11 +10,11 @@ sleep(1)
 browser.find_element_by_class_name('shopee-button-outline.shopee-button-outline--primary-reverse').click()
 username = browser.find_element_by_name('loginKey')
 # Username
-# username.send_keys('bleach_uekiza99@hotmail.com')
-username.send_keys('0641209436')
+username.send_keys('bleach_uekiza99@hotmail.com')
+# username.send_keys('0641209436')
 passwd = browser.find_element_by_name('password')
 passwd.send_keys('Freddie18622089')
-sleep(0.2)
+sleep(1)
 # ปุ่มกดล็อคอิน
 Btnlogin = browser.find_element_by_class_name('_1ruZ5a._3Nrkgj._3kANJY._1IRuK_.hh2rFL._3_offS').click()
 # ดีเลย์ใส่ OTP (20 วิเปลื่อนได้ แต่ถ้าไม่มี OTP ก็ปิดเลย ใส่ # หน้าบรรทัด)
@@ -28,16 +28,21 @@ sleep(0.5)
 #Local Web
 # browser.get('file:///C:/Users/Zachtix/Desktop/ZexKode/project_bot_shopee/web-test/Shopee%20Thailand.html')
 
-def pagePay():
-    onclickbtnpagePay = False
+# def
+
+def ChangeDeliveryonpagePay():
+    onclickbtnChangeDelivery = False
     while (True):
-        if onclickbtnpagePay == False:
+        if onclickbtnChangeDelivery == False:
             try:
                 # ดีเลย์ 0.5 วิ ถ้าเน็ตมืงไวมืงตั้ง 0.1 เลยก็ได้ ตั้งดีๆ นะไม่งั้น error นะจ๊ะ
-                sleep(0.5)
+                sleep(1)
                 browser.find_element_by_xpath('//*[@id="main"]/div/div[3]/div[2]/div[2]/div[2]/div/div[2]/div[2]/div[3]').click()
-                browser.find_element_by_class_name('stardust-radio.PYpWnK.stardust-radio--checked').click()
-                browser.find_element_by_class_name('stardust-button.stardust-button--primary.-T3OGq').click()
+                sleep(0.5)
+                browser.find_element_by_class_name('_1uYE59').click()
+                browser.find_element_by_xpath('//*[@id="modal"]/div[2]/div[1]/div[2]/div/button[2]').click()
+                browser.refresh()
+                sleep(0.5)
                 browser.find_element_by_class_name('_1n5Ut6').click()
                 browser.find_element_by_xpath('//div/div[3]/div[2]/div[4]/div[1]/div/div[1]/div[2]/span[3]/button').click()
                 browser.find_element_by_class_name('credit-card-info-view').click()
@@ -45,9 +50,10 @@ def pagePay():
                 # browser.find_element_by_class_name('').click()
                 # browser.find_element_by_class_name('').click()
                 print('pay success')
-                onclickbtnpagePay= True
+                # onclickbtnChangeDelivery= True
             except NoSuchElementException:
                 print("NoSuchElementException")
+                pass
 
 def pageCart():
     onclickbtnpageCart = False
@@ -60,9 +66,10 @@ def pageCart():
                 browser.find_element_by_class_name('shopee-button-solid.shopee-button-solid--primary').click()
                 print('Open Pay Page')
                 onclickbtnpageCart = True
-                pagePay()
+                ChangeDeliveryonpagePay()
             except NoSuchElementException:
                 print("NoSuchElementException")
+                pass
 
 def pageProduct():
     onclickbtnpageProduct = False
