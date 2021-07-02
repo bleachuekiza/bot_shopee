@@ -51,7 +51,7 @@ def ChangeDeliveryonpagePay():
                 browser.find_element_by_xpath('//*[@id="modal"]/div[2]/div[1]/div[2]/div/button[2]').click()
                 # browser.refresh()
                 sleep(0.5)
-                # browser.find_element_by_class_name('_1n5Ut6').click()
+                browser.find_element_by_class_name('_1n5Ut6').click()
                 browser.find_element_by_xpath('//*[@id="main"]/div/div[3]/div[2]/div[4]/div[1]/div/div[1]/div[2]/span[2]/button').click()
                 browser.find_element_by_class_name('credit-card-info-view').click()
                 # browser.find_element_by_class_name('').click()
