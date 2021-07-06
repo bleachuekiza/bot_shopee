@@ -1,7 +1,8 @@
 {
     "_comment": "วิธีตั้งค่าอ่านไฟล์ README.md",
-    "username": "bleach_uekiza99@hotmail.com",
-    "password": "Freddie18622089",
-    "url": "https://shopee.co.th/product/81262341/4170913001",
-    "delayLogin": 2
+    "username": "",
+    "password": "",
+    "url": "https://shopee.co.th/product/77540760/5430472791",
+    "delayLogin": 2,
+    "Test": "True"
 }
